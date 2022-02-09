@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Less Annoying Glassdoor",
-    "description": "Bypasses HardSell for seamless browsing on Glassdoor",
+    "description": "Bypasses paywall for seamless browsing on Glassdoor",
     "version": "1.0",
     "icons": {
         "128": "icon.png",

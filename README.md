@@ -1,16 +1,12 @@
 # Chrome Extension TypeScript Starter
 
-![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
+![build](https://github.com/ericvtheg/Less-Annoying-Glassdoor/workflows/build/badge.svg)
 
-Chrome Extension, TypeScript and Visual Studio Code
+Bypasses paywall for a better user experience on Glassdoor.
 
 ## Prerequisites
 
 * [node + npm](https://nodejs.org/) (Current Version)
-
-## Option
-
-* [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Includes the following
 
@@ -18,17 +14,11 @@ Chrome Extension, TypeScript and Visual Studio Code
 * Webpack
 * React
 * Jest
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
 
 ## Project Structure
 
 * src/typescript: TypeScript source files
-* src/assets: static files
+* src/public: static files
 * dist: Chrome Extension directory
 * dist/js: Generated JavaScript files
 
@@ -37,10 +27,6 @@ Chrome Extension, TypeScript and Visual Studio Code
 ```
 npm install
 ```
-
-## Import as Visual Studio Code project
-
-...
 
 ## Build
 

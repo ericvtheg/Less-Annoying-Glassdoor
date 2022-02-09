@@ -2,7 +2,7 @@
 
 ![build](https://github.com/ericvtheg/Less-Annoying-Glassdoor/workflows/build/badge.svg)
 
-Bypasses paywall for a better user experience on Glassdoor.
+A Chrome extension that bypasses the Glassdoor paywall for a better user experience.
 
 ## Prerequisites
 

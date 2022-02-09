@@ -1,35 +1,37 @@
 {
-  "manifest_version": 3,
-
-  "name": "Chrome Extension TypeScript Starter",
-  "description": "Chrome Extension, TypeScript, Visual Studio Code",
-  "version": "1.0",
-
-  "options_ui": {
-    "page": "options.html"
-  },
-
-  "action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-
-  "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
-      }
-  ],
-
-  "background": {
-    "service_worker": "js/background.js"
-  },
-
-  "permissions": [
-    "storage"
-  ],
-
-  "host_permissions": [
-    "<all_urls>"
-  ]
+    "manifest_version": 3,
+    "name": "Less Annoying Glassdoor",
+    "description": "Bypasses HardSell for seamless browsing on Glassdoor",
+    "version": "1.0",
+    "options_ui": {
+        "page": "options.html"
+    },
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://glassdoor.com/*",
+                "http://glassdoor.com/*",
+                "<all_urls>"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "js/content_script.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [{
+      "resources": ["js/remove_hardsell.js"],
+      "matches": ["<all_urls>"]
+    }],
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
 }

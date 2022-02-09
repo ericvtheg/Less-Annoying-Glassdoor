@@ -1,9 +1,9 @@
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-  if (msg.color) {
-    console.log("Receive color = " + msg.color);
-    document.body.style.backgroundColor = msg.color;
-    sendResponse("Change color to " + msg.color);
-  } else {
-    sendResponse("Color message is none.");
-  }
-});
+var s = document.createElement('script');
+s.src = chrome.runtime.getURL('./js/remove_hardsell.js');
+(document.head || document.documentElement).appendChild(s);
+
+// chrome.tabs.executeScript({file: "./remove_hardsell.js"}, function() {
+//     if(chrome.runtime.lastError) {
+//       console.error("Script injection failed: " + chrome.runtime.lastError.message);
+//     }
+//   });

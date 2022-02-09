@@ -3,21 +3,18 @@
     "name": "Less Annoying Glassdoor",
     "description": "Bypasses HardSell for seamless browsing on Glassdoor",
     "version": "1.0",
-    "options_ui": {
-        "page": "options.html"
-    },
-    "action": {
-        "default_icon": "icon.png",
-        "default_popup": "popup.html"
-    },
     "icons": {
-       "128": "icon.png" },
+        "128": "icon.png",
+        "16": "16.png",
+        "48": "48.png"
+    },
     "content_scripts": [
         {
             "matches": [
-                "https://glassdoor.com/*",
                 "http://glassdoor.com/*",
-                "<all_urls>"
+                "http://*.glassdoor.com/*",
+                "https://glassdoor.com/*",
+                "https://*.glassdoor.com/*"
             ],
             "run_at": "document_idle",
             "js": [
@@ -25,15 +22,23 @@
             ]
         }
     ],
-    "web_accessible_resources": [{
-      "resources": ["js/remove_hardsell.js"],
-      "matches": ["<all_urls>"]
-    }],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "js/remove_hardsell.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
     "permissions": [
-        "scripting",
-        "activeTab"
+        "scripting"
     ],
     "host_permissions": [
-        "<all_urls>"
+        "http://glassdoor.com/*",
+        "http://*.glassdoor.com/*",
+        "https://glassdoor.com/*",
+        "https://*.glassdoor.com/*"
     ]
 }

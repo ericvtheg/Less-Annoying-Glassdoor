@@ -1,4 +1,4 @@
-# Chrome Extension TypeScript Starter
+# Less Annoying Glassdoor
 
 ![build](https://github.com/ericvtheg/Less-Annoying-Glassdoor/workflows/build/badge.svg)
 

@@ -32,9 +32,7 @@
             ]
         }
     ],
-    "permissions": [
-        "scripting"
-    ],
+    "permissions": [],
     "host_permissions": [
         "http://glassdoor.com/*",
         "http://*.glassdoor.com/*",
